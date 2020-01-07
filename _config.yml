@@ -6,7 +6,7 @@ favicon: 'assets/images/favicon.ico'
 baseurl: ''
 disqus: 'carloscdias-com'
 email: 'carlosdias.dev@gmail.com'
-mailchimp-list: ''
+mailchimp-list: 'https://carloscdias.us4.list-manage.com/subscribe/post?u=679ffc9737e4e61d6b45ca49e&amp;id=41925b50cb'
 
 include: ["_pages"]
 permalink: /:title/
