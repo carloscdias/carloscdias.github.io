@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Quick tour from C++98 to C++17"
+title:  "Quick tour from C++98 to C++17"
 author: carlos
 categories: [ programming, tutorial ]
 image: assets/images/11.jpg
