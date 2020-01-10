@@ -22,7 +22,7 @@ authors:
     carlos:
       name:           Carlos
       site:           https://carloscdias.com
-      avatar:         /assets/images/avatar.jpg
+      avatar:         assets/images/avatar.jpg
       bio:            "Hi, I am Carlos, SWE 2x @ Google, 2x @ UNICEF and author of this blog. I like to make things work and hope you enjoy the experiences I am going to share here."
       email:          carlosdias.dev@gmail.com
       twitter:        https://twitter.com/devesquerdinha
@@ -35,7 +35,7 @@ defaults:
     values:
       layout: post
       author: carlos
-      avatar: /assets/images/avatar.jpg
+      avatar: assets/images/avatar.jpg
       
   # all pages
   - scope:
