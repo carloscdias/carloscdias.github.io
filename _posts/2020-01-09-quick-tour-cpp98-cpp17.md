@@ -59,6 +59,26 @@ Generally speaking, enhancements in the C++11
 - structured bindings
 - if-init expressions
 
+```
+#include <iostream>
+#include <unordered_map>
+#include <algorithm>
+
+using namespace std;
+
+int main (int argc, char *argv[])
+{
+  unordered_map<string, int> umap;
+
+  for_each(argv + 1, argv + argc, [&umap](char *x) {umap[x]++;});
+
+  for (auto &[first, second] : umap)
+    cout << first << ", " << second << endl;
+
+  return 0;
+}
+```
+
 ### EXTRA: C++20
 
 Future (Feb, 2020), introduces modules, coroutines, std::format, among others.
