@@ -59,7 +59,7 @@ Generally speaking, enhancements in the C++11
 - structured bindings
 - if-init expressions
 
-```
+{% highlight cpp %}
 #include <iostream>
 #include <unordered_map>
 #include <algorithm>
@@ -77,7 +77,7 @@ int main (int argc, char *argv[])
 
   return 0;
 }
-```
+{% endhighlight %}
 
 ### EXTRA: C++20
 
