@@ -32,6 +32,37 @@ introducing the main features of each one.
 This realease is commonly known as a bug fix release for the C++98 revision and included only one new feature, 
 [value initialization](https://en.cppreference.com/w/cpp/language/value_initialization).
 
+{% highlight cpp %}
+#include <iostream>
+#include <map>
+#include <algorithm>
+
+struct frequency_counter {
+  std::map<std::string, int>* map;
+
+  frequency_counter(std::map<std::string, int>* m) : map(m) {}
+  void operator()(const char* word) {
+    (*map)[word]++;
+  }
+
+};
+
+int main (int argc, char *argv[]) {
+  std::map<std::string, int> map;
+  frequency_counter functor(&map);
+
+  std::for_each(argv + 1, argv + argc, functor);
+
+  for (std::map<std::string, int>::iterator it = map.begin();
+       it != map.end();
+       ++it)
+    std::cout << it->first << ": " << it->second << std::endl;
+
+  return 0;
+}
+
+{% endhighlight %}
+
 ### C++11
 
 - auto
@@ -41,6 +72,24 @@ This realease is commonly known as a bug fix release for the C++98 revision and 
 - unique_ptr/shared_ptr
 - constexpr
 
+{% highlight cpp %}
+#include <iostream>
+#include <unordered_map>
+#include <algorithm>
+
+int main (int argc, char *argv[]) {
+  std::unordered_map<std::string, int> umap;
+
+  std::for_each(argv + 1, argv + argc, [&umap](const char* x){umap[x]++;});
+
+  for (const auto& pair : umap)
+    std::cout << pair.first << ": " << pair.second << std::endl;
+
+  return 0;
+}
+
+{% endhighlight %}
+
 ### C++14
 
 Generally speaking, enhancements in the C++11
@@ -48,6 +97,9 @@ Generally speaking, enhancements in the C++11
 - generic lambda functions
 - make_unique/make_shared (new or delete should not be seen in code anymore)
 - constexpr more flexible
+
+{% highlight cpp %}
+{% endhighlight %}
 
 ### C++17
 
@@ -64,16 +116,14 @@ Generally speaking, enhancements in the C++11
 #include <unordered_map>
 #include <algorithm>
 
-using namespace std;
-
 int main (int argc, char *argv[])
 {
-  unordered_map<string, int> umap;
+  std::unordered_map<std::string, int> umap;
 
-  for_each(argv + 1, argv + argc, [&umap](char *x) {umap[x]++;});
+  std::for_each(argv + 1, argv + argc, [&umap](const char* x){umap[x]++;});
 
-  for (auto &[first, second] : umap)
-    cout << first << ", " << second << endl;
+  for (const auto& [first, second] : umap)
+    std::cout << first << ": " << second << std::endl;
 
   return 0;
 }
