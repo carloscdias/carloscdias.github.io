@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "First steps to programming"
+title:  "First steps into programming"
 author: carlos
 categories: [ programming, tutorial ]
 image: assets/images/4.jpg
