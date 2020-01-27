@@ -45,12 +45,22 @@ This realease is commonly known as a bug fix release for the C++98 revision and 
 C++98 they are usually refering to C++03.
 
 One valuable addition to the language came in the form of [Technical Report 1](https://en.wikipedia.org/wiki/C%2B%2B_Technical_Report_1) (TR1 for short) around 2005.
-TR1 is not a standard...
+TR1 is not a standard, it is (as the name says) a technical revision that proposed several additions to the C++ Standard Library, these additions included
+_smart pointers_, _hash tables_, _regular expressions_, among others. Many of these additions became part of the C++11 later, but before that happened, vendors started to use
+this document as a guide to create extensions, and even though these features weren't needed to create standard compliant distributions of compilers or libraries, several distributors
+implemented them under the namespace `std::tr1` to distinguish these features from the then-current standard library.
+
+Let's make use of these features on our example, still following the standard C++03 but including some of the features in the tr1.
 
 {% highlight cpp %}
+{% include_relative code_examples/example-03.cpp %}
 {% endhighlight %}
 
 ### C++11
+
+Most of the changes to the language are credited to this release. It wasn't only the new features, but the language itself
+evolved in a manner that C++11 gave to the programmer a more high-level environment to think and solve problems.
+
 
 - auto
 - ranged for loops
