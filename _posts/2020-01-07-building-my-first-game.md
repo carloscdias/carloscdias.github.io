@@ -8,5 +8,8 @@ tags: featured
 ---
 Building a game is tough, but fun as hell;
 
-## Describe the experience here
+- the most difficult parts
+- the stage my game is now
+
+## Point of view as a developer
 

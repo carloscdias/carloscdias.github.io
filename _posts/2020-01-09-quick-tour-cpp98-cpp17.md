@@ -61,6 +61,9 @@ Let's make use of these features on our example, still following the standard C+
 Most of the changes to the language are credited to this release. It wasn't only the new features, but the language itself
 evolved in a manner that C++11 gave to the programmer a more high-level environment to think and solve problems.
 
+Two of the most significant changes that arrived in C++11 were the move semantics and the rule of 5 (updated version of the rule of 3),
+which I am not going to cover here because they are a whole other topic by themselves.
+
 
 - auto
 - ranged for loops
