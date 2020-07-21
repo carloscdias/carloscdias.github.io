@@ -1,0 +1,35 @@
+# https://sequencediagram.org/#
+# https://www.websequencediagrams.com/
+title My steps to get the visa
+
+Cultural Vistas -> Me: application form sent
+activate Me
+Me -> IPRJ: request proof of enrollment and official transcript (portuguese only)
+note over IPRJ: 6 days later...
+Me -> IPRJ: get documents on campus
+create Official Translator
+Me -> Official Translator: request official translation
+activate Official Translator
+note right of Official Translator: ~2 business days
+Official Translator -> Me: translated documents
+deactivate Official Translator
+Me -> Cultural Vistas: application form filled
+deactivate Me
+note over Me: peaceful ~2 days
+Cultural Vistas -> Me: initial review done (new documents requested)
+activate Me
+Me -> Official Translator: ask for translation fix (error on date issued)
+activate Official Translator
+Official Translator -> Me: fixed translated documents
+deactivate Official Translator
+destroy Official Translator
+Me -> DAA: reach out to DAA Director to explain my current situation (old campus headmaster)
+Me -> Cultural Vistas: explain situation to immigration company and asks if there is any other way around
+create DCI
+DAA -> DCI: asks for directions
+DCI -> Me: call me explaining current status and future steps
+create SR-1
+create DMC Representative
+create University Director
+create University Departments Representative
+
