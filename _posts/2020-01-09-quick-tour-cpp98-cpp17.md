@@ -3,7 +3,7 @@ layout: post
 title:  "Quick tour from C++98 to C++17"
 author: carlos
 categories: [ programming, tutorial ]
-image: assets/images/11.jpg
+image: assets/images/cpp-cover.png
 tags: [ sticky, featured ]
 ---
 Wait, no more `new`? Wtf is `auto`? `constexpr`?! Why so many keywords??
